@@ -34,8 +34,6 @@ body {
     font-kerning: normal;
 
     @media screen and (max-width: $medium) { font-size: 14px; }
-    @media screen and (max-width: $small) { font-size: 12px; }
-    @media screen and (max-width: $extra-small) { font-size: 10px; }
 }
 
 a {
@@ -156,6 +154,10 @@ hr {
         float: none;
         width: 100%;
         margin-left: 0;
+    }
+
+    @media screen and (max-width: $small) {
+        font-size: 12px;
     }
 
     .page-heading {
