@@ -1,0 +1,266 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import 
+    "reset",
+    "variables",
+    "syntax-highlight"
+                ;
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    position: relative;
+
+    font-family: $global-font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $text-color;
+    background-color: $body-color;
+
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+
+    @media screen and (max-width: $medium) { font-size: 14px; }
+    @media screen and (max-width: $small) { font-size: 12px; }
+    @media screen and (max-width: $extra-small) { font-size: 10px; }
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+
+    &:visited {
+        text-decoration: none;
+        color: $text-color;
+    }
+    &:hover, &:active {
+        text-decoration: underline;
+        color: $text-color;
+    }
+}
+
+ul li {
+    position: relative;
+    padding-left: 1em;
+
+    &:before {
+        position: absolute;
+        left: 0;
+        content: ">"
+    }
+}
+
+hr {
+    border: 0 none;
+    border-top: 2px dashed $text-color;
+    background: none;
+    height:0;
+}
+
+/* Main */
+.main {
+    position: relative;
+    
+    max-width: $large;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3.5em;
+    
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    @media screen and (max-width: $medium) {
+        margin: 0;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+/* Sidebar */
+.sidebar {
+    float: left;
+    width: 25%;
+    margin-left: 40px;
+
+    @media screen and (max-width: $medium) {
+        float: none;
+        width: 100%;
+        margin-bottom: 3em;
+        margin-left: 0;
+    }
+}
+
+.sticky {
+    @media screen and (min-width: $medium) {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 3.5em;
+    }
+}
+
+.author-content {
+    .ascii {
+        font-size: 0.9em;
+        color: white;
+        margin-bottom: 2em;
+    }
+
+    .name {
+        margin-bottom: 0.5em;
+        font-size: 2em;
+    }
+
+    .bio {
+        margin-bottom: 3em;
+        font-size: 1.2em;
+
+        p {
+            margin-bottom: 0.3em;
+        }
+    }
+}
+
+.author-url {
+    li {
+        font-size: 1.2em;
+        margin-bottom: 0.6em;
+
+        @media screen and (max-width: $medium) { font-size: 1.4em; }
+    }
+}
+
+/* Content */
+.home {
+    float: left;
+    width: 60%;
+    margin-left: 3em;
+
+    @media screen and (max-width: $medium) {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .page-heading {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+}
+
+.post-list {
+
+    li {
+        font-size: 1.2em;
+        line-height: 1.5;
+
+        @media screen and (max-width: $medium) { font-size: 1.4em; }
+    }
+
+    .post-link { display: block; }
+
+    .post-date { 
+        float: left;
+        color: $date-color;
+        
+        // fix missing underline when hovered
+        text-decoration: inherit;
+    }
+    .post-title { margin-left: 6em; }
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    clear: both;
+    height: 80px;
+
+    h3 {
+        position: absolute;
+        right: 1em;
+        bottom: 1em;
+    }
+}
+
+/* Post */
+.back-home {
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    a {
+        font-size: 1.2em;
+    }
+}
+
+.post {
+    padding-top: 3em;
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+
+    .post-header {
+        margin-bottom: 2em;
+    }
+
+    .post-title {
+        font-size: 2em;
+        margin-bottom: 0.4em;
+    }
+    
+    .post-date {
+        padding-left: 1.7em;
+        color: $date-color;
+        font-size: 1.2em;
+    }
+
+    .post-content {
+        font-size: 1.2em;
+        line-height: 1.5em;
+        // text-align: justify;
+
+        p { 
+            margin-bottom: 2em;
+
+            code {
+                padding: 4px 6px;
+                border-radius: 3px;
+                font-size: 0.8em;
+                color: $code-color;
+                background-color: $code-bg-color;
+            }
+        }
+
+        a {
+            color: $link-color;
+            text-decoration: underline;
+
+            &:hover, &:active {
+                color: $link-hover-color;
+            }
+        }
+    }
+
+    .highlight {
+        margin-bottom: 2em;
+
+        pre {
+            border-radius: 0.5em;
+            padding: 40px 20px;
+        }
+    }
+}
