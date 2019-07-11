@@ -1,0 +1,10 @@
+{% capture img_fn %}{{ page.date | date: "%Y-%m-%d" }}-{{page.title | slugify }}/{{ include.name }}{% endcapture %}
+{% if include.caption %}
+  <figure>
+    <img src="/assets/posts/{{ img_fn }}" />
+    <figcaption>{{ include.caption }}</figcaption>
+  </figure>
+{% else %}
+  <img src="/assets/posts/{{ img_fn }}" />
+{% endif %}
+

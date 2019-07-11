@@ -236,7 +236,7 @@ hr {
         // text-align: justify;
 
         p { 
-            margin-bottom: 2em;
+            margin-bottom: 1em;
 
             code {
                 padding: 4px 6px;
@@ -264,5 +264,21 @@ hr {
             border-radius: 0.5em;
             padding: 40px 20px;
         }
+    }
+
+    figure {
+      figcaption {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+    }
+
+    img {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 60%;
+      height: auto;
+      border-radius: 8px;
     }
 }
