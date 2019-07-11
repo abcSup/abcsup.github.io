@@ -10,6 +10,7 @@ title: abcSup's Blog
 email: hello@abcsup.net
 github_username:  abcsup
 permalink: /:year/:month/:day/:title/
+timezone: Asia/Kuala_Lumpur
 
 # Build settings
 markdown: kramdown
