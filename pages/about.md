@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 ## Resume
-
+---------
 ### Professional Experience
 #### Mobile Application Developer Intern @ Studio 212 Sdn Bhd, Malaysia
 Jul 2015 - Dec 2015  
@@ -17,7 +17,7 @@ department to monitor its employees using bluetooth and NFC technology.
 
 ### Education
 #### Diablo Valley College, United States
-Aug 2017 - Dec 2019
+Aug 2017 - Dec 2019  
 * A.S. in Computer Science
 * GPA 4.00 / 4.00
 * Relevant Coursework: Advanced Programming with C & C++, Assembly Language
@@ -26,17 +26,19 @@ Oriented Programming
 * Transferring to a 4-year university UC/CSU in Fall 2020 to pursue a Bachelor’s degree
 
 ### Awards and Achievements
+
 2019  
-* [**Best Financial Technology Hack** | Cal Hacks 6.0](https://devpost.com/software/performanceplus-okzb86)
+* [**Best Financial Technology Hack** \| Cal Hacks 6.0](https://devpost.com/software/performanceplus-okzb86)
 
 2015  
 * **Apple Worldwide Developers Conference (WWDC) Scholarships 2015**
 
 2014  
 * **Apple Worldwide Developers Conference (WWDC) Scholarships 2014**
-* **Gold Medal** | Malaysian Computing Olympiad (MCO) 2014
+* **Gold Medal** \| Malaysian Computing Olympiad (MCO) 2014
 
 ### Personal Projects
+
 #### Homelab
 I have setup a personal “home lab” with second-hand enterprise servers to emulate a
 real-world production environment. I provision these systems to learn about system
