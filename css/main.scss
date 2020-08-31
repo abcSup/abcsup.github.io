@@ -50,14 +50,22 @@ a {
     }
 }
 
-ul li {
-    position: relative;
-    padding-left: 1em;
+ul {
+    padding-bottom: 1em;
 
-    &:before {
-        position: absolute;
-        left: 0;
-        content: ">"
+    li {
+        position: relative;
+        padding-left: 1em;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            content: ">"
+        }
+        
+        ul {
+            padding-bottom: 0;
+        }
     }
 }
 
@@ -73,10 +81,11 @@ h1 {
 }
 h2 {
     font-size: 1.5em;
+    line-height: 2em;
 }
 h3 {
     font-size: 1.17em;
-    margin: 1.5em 0;
+    line-height: 1.5em;
 }
 h4 {
     font-size: 1em;
